@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cedula: MyString
+  nombre: MyString
+  fch_ncto: 2015-05-15
+  mail: MyString
+  genero: false
+  celular: MyString
+
+two:
+  cedula: MyString
+  nombre: MyString
+  fch_ncto: 2015-05-15
+  mail: MyString
+  genero: false
+  celular: MyString

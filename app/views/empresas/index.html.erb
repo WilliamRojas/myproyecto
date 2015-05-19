@@ -1,0 +1,56 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lista Empresas</h1>
+
+  <%= form_tag empresas_path, :method => 'get' do %>
+  <% content_tag :label do %>
+  Buscar NIT:
+  <%= text_field_tag :search, params[:search] %>
+  <%= submit_tag "Buscar", :name => nil %>
+  <% end %>
+  <% end %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nit</th>
+      <th>Razon social</th>
+      <th>Gerente</th>
+      <th>Direccion</th>
+      <th>Email</th>
+      <th>Telefono</th>
+      <th>Fch creacion</th>
+      <th>Nro trabajadores</th>
+      <th>Municipio</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @empresas.each do |empresa| %>
+      <tr>
+        <td><%= empresa.nit %></td>
+        <td><%= empresa.razon_social %></td>
+        <td><%= empresa.gerente %></td>
+        <td><%= empresa.direccion %></td>
+        <td><%= empresa.email %></td>
+        <td><%= empresa.telefono %></td>
+        <td><%= empresa.fch_creacion %></td>
+        <td><%= empresa.nro_trabajadores %></td>
+        <td><%= empresa.municipio.nombre rescue nil %></td>
+        <td><%= link_to 'Mostrar', empresa %></td>
+        <td><%= link_to 'Editar', edit_empresa_path(empresa) %></td>
+        <td><%= link_to 'Eliminar', empresa, method: :delete, data: { confirm: 'Seguro que quiere eliminar el registro?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nueva Empresa', new_empresa_path %>
+
+  <%= will_paginate @empresas, :previous_label => '&laquo; Anterior', :next_label => 'Siguiente
+  &raquo;' %>
+  <br>
+  Empresas: <%= @empresas.count %>

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cedula:</strong>
+  <%= @cliente.cedula %>
+</p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @cliente.nombre %>
+</p>
+
+<p>
+  <strong>Fch ncto:</strong>
+  <%= @cliente.fch_ncto %>
+</p>
+
+<p>
+  <strong>Mail:</strong>
+  <%= @cliente.mail %>
+</p>
+
+<p>
+<strong>Genero:</strong>
+<%= mostrar_genero(@cliente.genero) %>
+</p>
+
+<p>
+  <strong>Celular:</strong>
+  <%= @cliente.celular %>
+</p>
+
+<%= link_to 'Editar', edit_cliente_path(@cliente) %> |
+<%= link_to 'Atras', clientes_path %>

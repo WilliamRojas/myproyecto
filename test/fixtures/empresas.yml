@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nit: MyString
+  razon_social: MyString
+  gerente: MyString
+  direccion: MyString
+  email: MyString
+  telefono: MyString
+  fch_creacion: 2015-05-15
+  nro_trabajadores: 1
+  municipio_id: 
+
+two:
+  nit: MyString
+  razon_social: MyString
+  gerente: MyString
+  direccion: MyString
+  email: MyString
+  telefono: MyString
+  fch_creacion: 2015-05-15
+  nro_trabajadores: 1
+  municipio_id: 
